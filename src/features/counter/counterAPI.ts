@@ -1,6 +1,9 @@
-// A mock function to mimic making an async request for data
+// 3 - actual server call
 export function fetchCount(amount = 1) {
   return new Promise<{ data: number }>((resolve) =>
     setTimeout(() => resolve({ data: amount }), 500)
   );
 }
+
+
+

@@ -15,7 +15,6 @@ export function Counter() {
   const count = useAppSelector(selectCount);
   const dispatch = useAppDispatch();
   const [incrementAmount, setIncrementAmount] = useState('2');
-
   const incrementValue = Number(incrementAmount) || 0;
 
   return (
@@ -50,6 +49,7 @@ export function Counter() {
         >
           Add Amount
         </button>
+        {/* 1 - call the async method */}
         <button
           className={styles.asyncButton}
           onClick={() => dispatch(incrementAsync(incrementValue))}
