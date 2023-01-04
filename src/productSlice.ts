@@ -2,11 +2,13 @@ import { createAsyncThunk, createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { RootState, AppThunk } from './app/store';
 import { getDataFromServer, addProduct, delProduct, updProduct } from './productAPI';
 
+export interface Pr {
+    id:Number
+    desc:string;
+    price:number;
+}
 export interface ProductState {
-    // prodId:string;
-    // prodDesc:string;
-    // prodPrice:number;
-    prodAr: any[],
+    prodAr: Pr[],
     updateFlag: boolean
 }
 const initialState: ProductState = {
